@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ReactComponent } from "../components/ReactComponent";
+import VueComponent from "../components/VueComponent.vue";
+import background from "../assets/background.svg";
+---
+
+<Layout>
+  <img
+    class="fixed -z-10 h-full w-full"
+    src={background.src}
+    alt=""
+    fetchpriority="high"
+  />
+  <div class="mx-10 my-5">
+    <h1 class="mb-2.5 text-2xl">Client Directive On</h1>
+    <div class="flex flex-row gap-5">
+      <ReactComponent client:only="react" />
+      <VueComponent client:only="vue" />
+    </div>
+  </div>
+  <div class="mx-10 my-5">
+    <h1 class="mb-2.5 text-2xl">Client Directive Off</h1>
+    <div class="flex flex-row gap-5">
+      <ReactComponent />
+      <VueComponent />
+    </div>
+  </div>
+</Layout>

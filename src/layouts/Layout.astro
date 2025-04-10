@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>JTC Astro</title>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="flex flex-row bg-gray-800 px-10 py-2.5 text-xl text-white">
+      <div class="flex-1 font-bold"><a href="/">JTC Astro</a></div>
+      <ul class="flex flex-row gap-5">
+        <li><a href="/demo">Demo</a></li>
+        <li><a href="/users">Static</a></li>
+        <li><a href="/users">On Demand</a></li>
+      </ul>
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
