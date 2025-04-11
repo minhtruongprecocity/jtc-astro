@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import * as post from "../data/new_post.md";
+---
+
+<Layout>
+  <div class="px-10 py-5">
+    <h1 class="text-2xl">{post.frontmatter.title}</h1>
+    <h3>{post.frontmatter.author}</h3>
+    <div class="mt-5">
+      <post.Content />
+    </div>
+  </div>
+</Layout>

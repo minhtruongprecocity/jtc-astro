@@ -1,16 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { type User } from "../types/User";
 
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  ipAddress: string;
-}
-
-const response = await fetch("https://jtc-astro-api.pages.dev/api/users.json");
-const users: User[] = await response.json();
+const users: User[] = await fetch(
+  "https://jtc-astro-api.pages.dev/api/users.json",
+).then((response) => response.json());
 ---
 
 <Layout>
