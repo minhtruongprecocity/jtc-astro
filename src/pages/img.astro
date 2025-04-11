@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import demoImage from "../assets/demo.jpg";
+---
+
+<Layout>
+  <Image
+    src={demoImage}
+    width="640"
+    height="360"
+    alt="demo image"
+    class="mt-5"
+  />
+</Layout>

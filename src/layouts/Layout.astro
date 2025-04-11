@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import background from "../assets/background.svg";
 ---
 
 <!doctype html>
@@ -12,16 +13,24 @@ import "../styles/global.css";
     <title>JTC Astro</title>
   </head>
   <body class="bg-gray-100">
+    <img
+      class="fixed -z-10 h-full w-full"
+      src={background.src}
+      alt=""
+      fetchpriority="high"
+    />
     <nav class="flex flex-row bg-gray-800 px-10 py-2.5 text-xl text-white">
       <div class="flex-1 font-bold"><a href="/">JTC Astro</a></div>
       <ul class="flex flex-row gap-5">
         <li><a href="/demo">Demo</a></li>
         <li><a href="/users">API Content</a></li>
         <li><a href="/data">MD Content</a></li>
-        <li><a href="/image">Image</a></li>
+        <li><a href="/img">Image</a></li>
       </ul>
     </nav>
-    <slot />
+    <div class="px-10 py-5">
+      <slot />
+    </div>
   </body>
 </html>
 
