@@ -1,5 +1,6 @@
 ---
-import image from "../assets/demo.jpg";
+import { Image } from "astro:assets";
+import demoImage from "../assets/demo.jpg";
 ---
 
-<img src={image.src} width="640" />
+<Image src={demoImage} width="640" height="360" alt="demo image" />
